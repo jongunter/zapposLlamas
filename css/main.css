@@ -79,6 +79,12 @@ nav li a.active {
 nav li:first-child a {
   margin-left: 0;
 }
+nav li:hover a {
+  color: black;
+}
+nav li:hover a.active {
+  color: white;
+}
 #main {
   background: white;
   border-radius: 1em;
