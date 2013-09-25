@@ -8,10 +8,6 @@ body {
         background: @main-color;
 }
 
-#main, .tagline, nav, footer .inner {
-    width: 960px;
-    margin: 0 auto;
-}
 
 header {
 
@@ -48,14 +44,14 @@ header {
 }
 
 .teaser-image {
-    background: url("../img/llamas-home.jpg");
+    background: url("../img/llamas-home.jpg") @secondary-color;
     height: 500px;
     background-size: 100%;
     background-position: center center;
     background-repeat: no-repeat;
     position: relative;
     margin: 0;
-    overflow: auto;
+    overflow: hidden;
 
     .tagline {
         font-size: 2em;
@@ -85,13 +81,17 @@ nav {
 
     li a {
         display: block;
+        padding: 0.4em 2em;
+        margin: 1.5em 0.5em 1em 0.5em;
+        font-size: 1.2em;
+        text-decoration: none;
+        color: @secondary-color;
+    }
+
+    li a.active {
         background: @secondary-color;
         border-radius: 1em;
-        padding: 0.4em 2em;
-        margin: 1.5em 1em 1em 1em;
-        font-size: 1.2em;
         color: white;
-        text-decoration: none;
     }
 
     li:first-child a {
@@ -129,4 +129,74 @@ footer {
         color: white;
     }
 
+}
+
+#main, .tagline, nav, footer .inner {
+
+    @media (min-width: 1200px) { width: 960px; }
+    @media (max-width: 1200px) { width: 760px; }
+    @media (max-width: 900px) { 
+        width: auto;
+
+    }
+
+    margin: 0 auto;
+}
+
+    @media (max-width: 900px) { 
+        .teaser-image {
+            display: none;
+        }
+
+        footer .inner {
+            padding: 0 2em;
+        }
+
+        #main {
+            border-radius: 0;
+        }
+        
+        nav {
+
+            ul {
+                padding: 0 2em;
+                width: auto;
+            }
+            
+
+            ul li a {
+                padding: 1em 1em;
+            }
+        }
+
+        body {
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+
+ @media (max-width: 600px) { 
+
+    nav ul li {
+        float: none;
+        margin: 0;
+
+        a {
+            margin: 0;
+        }
+    }
+
+    header {
+        width: auto;
+        padding: 0 2em;
+
+        a.site-title {
+         width:auto;
+         font-size: 1em;
+         width: 200px;
+         margin-left: auto;
+         margin-right: auto;
+        }
+
+    }
 }

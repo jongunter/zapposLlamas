@@ -3,13 +3,6 @@ body {
   font-family: 'Raleway', sans-serif;
   background: #a89979;
 }
-#main,
-.tagline,
-nav,
-footer .inner {
-  width: 960px;
-  margin: 0 auto;
-}
 header {
   margin: 0 auto;
   width: 400px;
@@ -39,14 +32,14 @@ header a.site-title em {
   line-height: 1;
 }
 .teaser-image {
-  background: url("../img/llamas-home.jpg");
+  background: url("../img/llamas-home.jpg") #585d30;
   height: 500px;
   background-size: 100%;
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
   margin: 0;
-  overflow: auto;
+  overflow: hidden;
 }
 .teaser-image .tagline {
   font-size: 2em;
@@ -71,13 +64,16 @@ nav ul li {
 }
 nav li a {
   display: block;
+  padding: 0.4em 2em;
+  margin: 1.5em 0.5em 1em 0.5em;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #585d30;
+}
+nav li a.active {
   background: #585d30;
   border-radius: 1em;
-  padding: 0.4em 2em;
-  margin: 1.5em 1em 1em 1em;
-  font-size: 1.2em;
   color: white;
-  text-decoration: none;
 }
 nav li:first-child a {
   margin-left: 0;
@@ -104,4 +100,76 @@ footer .inner {
 }
 footer a {
   color: white;
+}
+#main,
+.tagline,
+nav,
+footer .inner {
+  margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  #main,
+  .tagline,
+  nav,
+  footer .inner {
+    width: 960px;
+  }
+}
+@media (max-width: 1200px) {
+  #main,
+  .tagline,
+  nav,
+  footer .inner {
+    width: 760px;
+  }
+}
+@media (max-width: 900px) {
+  #main,
+  .tagline,
+  nav,
+  footer .inner {
+    width: auto;
+  }
+}
+@media (max-width: 900px) {
+  .teaser-image {
+    display: none;
+  }
+  footer .inner {
+    padding: 0 2em;
+  }
+  #main {
+    border-radius: 0;
+  }
+  nav ul {
+    padding: 0 2em;
+    width: auto;
+  }
+  nav ul li a {
+    padding: 1em 1em;
+  }
+  body {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+@media (max-width: 600px) {
+  nav ul li {
+    float: none;
+    margin: 0;
+  }
+  nav ul li a {
+    margin: 0;
+  }
+  header {
+    width: auto;
+    padding: 0 2em;
+  }
+  header a.site-title {
+    width: auto;
+    font-size: 1em;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
