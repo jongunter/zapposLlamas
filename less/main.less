@@ -1,0 +1,132 @@
+@main-color:#A89979;
+@secondary-color:#585D30;
+@main-color-transparent: RGBA(163,158,121, 0.3);
+
+body {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+        background: @main-color;
+}
+
+#main, .tagline, nav, footer .inner {
+    width: 960px;
+    margin: 0 auto;
+}
+
+header {
+
+     margin: 0 auto;
+     width: 400px;
+
+
+    a.site-title {
+        text-align: center;
+        display: block;
+        font-size: 1.5em;
+        font-weight: 900;
+        text-decoration: none;
+        color: @main-color;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin: 0.5em 0;
+        border: @main-color-transparent 2px solid;
+        padding: 0.5em 0;
+        border-radius: 1em;
+        background: white;
+
+        em {
+            text-decoration: none;
+            font-family: 'Lily Script One', cursive;
+            text-transform: none;
+            color: @secondary-color;
+            display: block;
+            font-size: 3em;
+            line-height: 1;
+        }
+    }
+
+}
+
+.teaser-image {
+    background: url("../img/llamas-home.jpg");
+    height: 500px;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0;
+    overflow: auto;
+
+    .tagline {
+        font-size: 2em;
+        background: RGBA(255, 255, 255, 0.6);
+        text-align: center;
+        padding: 0.3em 0;
+        margin-top: 400px;
+        border-radius: 1em;
+    }
+}
+
+nav {
+    ul, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        text-align: center;
+        width: 100%;
+    }
+    
+    ul li {
+        display: block;
+        float: left;
+    }
+
+    li a {
+        display: block;
+        background: @secondary-color;
+        border-radius: 1em;
+        padding: 0.4em 2em;
+        margin: 1.5em 1em 1em 1em;
+        font-size: 1.2em;
+        color: white;
+        text-decoration: none;
+    }
+
+    li:first-child a {
+        margin-left: 0;
+    }
+
+}
+
+#main {
+    background: white;
+    border-radius: 1em;
+    clear:both;
+
+    .inner {
+        padding: 2em;
+    }
+
+    h1 {
+        margin-top: 0;
+        color: @secondary-color;
+    }
+}
+
+
+footer {
+    background: @secondary-color;
+    padding: 2em 0;
+    margin-top: 2em;
+
+    .inner {
+        color: @main-color;
+    }
+
+    a {
+        color: white;
+    }
+
+}
