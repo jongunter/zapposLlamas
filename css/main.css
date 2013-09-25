@@ -171,3 +171,9 @@ footer .inner {
     margin-right: auto;
   }
 }
+section {
+  display: none;
+}
+section.active {
+  display: block;
+}
