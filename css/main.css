@@ -150,10 +150,6 @@ footer .inner {
   nav ul li a {
     padding: 1em 1em;
   }
-  body {
-    width: 100%;
-    overflow: hidden;
-  }
 }
 @media (max-width: 600px) {
   nav ul li {
