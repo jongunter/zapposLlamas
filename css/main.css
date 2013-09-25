@@ -41,13 +41,14 @@ header a.site-title em {
   margin: 0;
   overflow: hidden;
 }
-.teaser-image .tagline {
+.teaser-image h1 {
   font-size: 2em;
   background: rgba(255, 255, 255, 0.6);
   text-align: center;
   padding: 0.3em 0;
   margin-top: 400px;
   border-radius: 1em;
+  font-weight: normal;
 }
 nav ul,
 nav li {
@@ -86,9 +87,10 @@ nav li:first-child a {
 #main .inner {
   padding: 2em;
 }
-#main h1 {
+#main h2 {
   margin-top: 0;
   color: #585d30;
+  font-size: 2em;
 }
 footer {
   background: #585d30;
@@ -102,14 +104,14 @@ footer a {
   color: white;
 }
 #main,
-.tagline,
+h1,
 nav,
 footer .inner {
   margin: 0 auto;
 }
 @media (min-width: 1200px) {
   #main,
-  .tagline,
+  h1,
   nav,
   footer .inner {
     width: 960px;
@@ -117,7 +119,7 @@ footer .inner {
 }
 @media (max-width: 1200px) {
   #main,
-  .tagline,
+  h1,
   nav,
   footer .inner {
     width: 760px;
@@ -125,7 +127,7 @@ footer .inner {
 }
 @media (max-width: 900px) {
   #main,
-  .tagline,
+  h1,
   nav,
   footer .inner {
     width: auto;

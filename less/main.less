@@ -53,13 +53,14 @@ header {
     margin: 0;
     overflow: hidden;
 
-    .tagline {
+    h1 {
         font-size: 2em;
         background: RGBA(255, 255, 255, 0.6);
         text-align: center;
         padding: 0.3em 0;
         margin-top: 400px;
         border-radius: 1em;
+        font-weight: normal;
     }
 }
 
@@ -109,9 +110,10 @@ nav {
         padding: 2em;
     }
 
-    h1 {
+    h2 {
         margin-top: 0;
         color: @secondary-color;
+        font-size: 2em;
     }
 }
 
@@ -131,7 +133,7 @@ footer {
 
 }
 
-#main, .tagline, nav, footer .inner {
+#main, h1, nav, footer .inner {
 
     @media (min-width: 1200px) { width: 960px; }
     @media (max-width: 1200px) { width: 760px; }
