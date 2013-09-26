@@ -30,6 +30,7 @@ header a.site-title em {
   display: block;
   font-size: 3em;
   line-height: 1;
+  font-weight: 900;
 }
 .teaser-image {
   background: url("../img/llamas-home.jpg") #585d30;
